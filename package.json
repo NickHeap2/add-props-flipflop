@@ -10,7 +10,7 @@
     "lint": "standard \"**/*.js\"",
     "test": "jest",
     "start": "node lib/index.js",
-    "pkg": "./node_modules/.bin/pkg package.json"
+    "pkg": "./node_modules/.bin/pkg package.json --compress gzip"
   },
   "files": [
     "lib/**"
@@ -22,8 +22,6 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@types/jest": "^27.0.3",
-    "jest": "^27.0.0",
     "pkg": "^5.5.1",
     "pkg-fetch": "^3.2.5",
     "standard": "^16.0.4"
