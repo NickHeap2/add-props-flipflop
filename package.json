@@ -1,0 +1,54 @@
+{
+  "name": "add-props-flipflop",
+  "version": "0.0.1",
+  "description": "Toggle additionalProperties in an OpenAPI spec",
+  "main": "lib/index.js",
+  "bin": {
+    "add-props-flipflop": "lib/index.js"
+  },
+  "scripts": {
+    "lint": "standard \"**/*.js\"",
+    "test": "jest",
+    "start": "node lib/index.js",
+    "pkg": "./node_modules/.bin/pkg package.json"
+  },
+  "files": [
+    "lib/**"
+  ],
+  "author": {
+    "name": "Nick Heap",
+    "email": "nickheap@gmail.com",
+    "url": "https://github.com/NickHeap2"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^27.0.3",
+    "jest": "^27.0.0",
+    "pkg": "^5.5.1",
+    "pkg-fetch": "^3.2.5",
+    "standard": "^16.0.4"
+  },
+  "dependencies": {
+    "@apidevtools/json-schema-ref-parser": "^9.0.9",
+    "@tsmx/json-traverse": "^1.0.5",
+    "commander": "^8.3.0"
+  },
+  "standard": {
+    "env": [
+      "jest"
+    ],
+    "ignore": [
+      "dist/**/*",
+      "**/node_modules/**"
+    ]
+  },
+  "pkg": {
+    "scripts": "lib/**/*.js",
+    "assets": "",
+    "targets": [
+      "node14-win-x64",
+      "node14-linux-x64"
+    ],
+    "outputPath": "dist"
+  }
+}
